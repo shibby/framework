@@ -14,9 +14,14 @@ class WhoopsDisplayerTest extends PHPUnit_Framework_TestCase {
 
 	public function testStatusAndHeadersAreSetInResponse()
 	{
-		$mockWhoops = m::mock('Whoops\Run[handleException]');
-		$mockWhoops->shouldReceive('handleException')->andReturn('response content');
-		$displayer = new WhoopsDisplayer($mockWhoops, false);
+		/**
+		 * Mocking whoops gives error bcs of its final class.
+		 * i don't know how to mock that, so i directly created object.
+		 */
+		$whoops = new \Whoops\Run;
+		//$mockWhoops = m::mock('Whoops\Run[handleException]');
+		//$mockWhoops->shouldReceive('handleException')->andReturn('response content');
+		$displayer = new WhoopsDisplayer($whoops, false);
 		$headers = array('X-My-Test-Header' => 'HeaderValue');
 		$exception = new HttpException(401, 'Unauthorized', null, $headers);
 		$response = $displayer->display($exception);
