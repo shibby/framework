@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.0",
         "classpreloader/classpreloader": "~1.0.2",
         "d11wtq/boris": "~1.0",
         "ircmaxell/password-compat": "~1.0",
@@ -33,7 +33,7 @@
         "symfony/http-kernel": "2.5.*",
         "symfony/process": "2.5.*",
         "symfony/routing": "2.5.*",
-        "symfony/security-core": "2.5.*",
+        "symfony/security-core": "2.6.*",
         "symfony/translation": "2.5.*"
     },
     "replace": {
