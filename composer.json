@@ -13,9 +13,10 @@
         "php": ">=7.0",
         "classpreloader/classpreloader": "~1.0.2",
         "d11wtq/boris": "~1.0",
-        "ircmaxell/password-compat": "~1.0",
         "filp/whoops": "~2.1",
+        "ircmaxell/password-compat": "~1.0",
         "jeremeamia/superclosure": "~1.0.1",
+        "moneo/laravel4-authorization": "dev-master",
         "monolog/monolog": "~1.6",
         "nesbot/carbon": "~1.0",
         "patchwork/utf8": "~1.1",
@@ -34,7 +35,8 @@
         "symfony/process": "2.7.*",
         "symfony/routing": "2.7.*",
         "symfony/security-core": "2.7.*",
-        "symfony/translation": "2.7.*"
+        "symfony/translation": "2.7.*",
+        "tomgrohl/laravel4-php71-encrypter": "^2.0@dev"
     },
     "replace": {
         "illuminate/auth": "self.version",
@@ -88,6 +90,9 @@
         "branch-alias": {
             "dev-master": "4.2-dev"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "suggest": {
         "doctrine/dbal": "Allow renaming columns and dropping SQLite columns."
